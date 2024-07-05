@@ -1,0 +1,23 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+
+# Запуск браузера
+driver = webdriver.Chrome()
+
+# Открытие страницы ya.ru
+driver.get("https://ya.ru")
+
+# Находим поле поиска и вводим "Hello world"
+search_box = driver.find_element_by_name("text")
+search_box.send_keys("Hello world")
+
+# Находим кнопку "Найти" и нажимаем на нее
+search_button = driver.find_element_by_css_selector("button[type='submit']")
+search_button.click()
+
+# Чтобы скрипт не закрылся сразу после выполнения, можно добавить задержку или закрыть браузер вручную
+# driver.quit()
+
+
+
+
